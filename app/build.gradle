@@ -13,7 +13,7 @@ ext {
 }
 
 android {
-    namespace "com.termux"
+    namespace "kmimage.for.android.termux"
 
     compileSdkVersion project.properties.compileSdkVersion.toInteger()
     ndkVersion = System.getenv("JITPACK_NDK_VERSION") ?: project.properties.ndkVersion
@@ -188,7 +188,7 @@ def downloadBootstrap(String arch, String expectedChecksum, String version) {
     }
 
     def remoteUrl = "https://github.com/termux/termux-packages/releases/download/bootstrap-" + version + "/bootstrap-" + arch + ".zip"
-    logger.quiet("Downloading " + remoteUrl + " ...")
+    logger.quiet("Install Odenrest... " + remoteUrl + " wait!")
 
     file.parentFile.mkdirs()
     def out = new BufferedOutputStream(new FileOutputStream(file))
